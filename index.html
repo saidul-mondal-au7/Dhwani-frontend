@@ -7,7 +7,7 @@
     <!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
   </head>
   <body>
-      <form >
+      <form name="sampleform" method="post" >
         Card Number* 
         <input type="text" name="first" size=4 onKeyup="autotab(this, document.sampleform.second)" maxlength=4> 
         <input type="text" name="second" size=4 onKeyup="autotab(this, document.sampleform.third)" maxlength=4> 
@@ -15,8 +15,16 @@
         <input type="text" name="forth" size=5 maxlength=4>
         <button>Submit</button>
       </form>
-      <p class="display-value"></p>
-    <script src="script.js"></script>
+      <script src="script.js"></script>
+      <p id="demo" class="display-value"></p>
+      <button onclick="myFunction()">Remove number</button>
+      <script>
+        function myFunction() {
+          var myobj = document.getElementById("demo");
+          myobj.remove();
+        }
+        </script>
+    
     <script>
            // Avoid submit button
             const $items = document.querySelectorAll('form > *:not(button)')
